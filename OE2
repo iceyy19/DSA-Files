@@ -17,14 +17,14 @@ public class Main {
             System.out.print("Enter number " + (i + 1) + ": ");
             unsignedArray[i] = scanner.nextInt();
             
-            // Ensure the input is non-negative (unsigned)
+            // This will check if the input is non-negative (unsigned)
             if (unsignedArray[i] < 0) {
                 System.out.println("Please enter a non-negative integer.");
                 i--; // Retry input for the same index
             }
         }
         
-        // Find the highest and lowest elements
+        // This will find the highest and and lowest numbers within the array
         int highest = Integer.MIN_VALUE;
         int lowest = Integer.MAX_VALUE;
         int sum = 0;
@@ -39,10 +39,10 @@ public class Main {
             sum += num;
         }
         
-        // Sort the array
+        // This is to sort the array
         Arrays.sort(unsignedArray);
         
-        // Output the results
+        // This will output the results
         System.out.println();
         System.out.println("Highest Element: " + highest);
         System.out.println("Lowest Element: " + lowest);
