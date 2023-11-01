@@ -1,0 +1,50 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Create a stack and a queue
+        Stack<Integer> stack = new Stack<>();
+        Queue<Integer> queue = new LinkedList<>();
+
+        // Input elements into the stack
+        System.out.println("Enter elements for the stack (enter '0' to stop):");
+        int element;
+        while (true) {
+            element = scanner.nextInt();
+            if (element == 0) {
+                break;
+            }
+            stack.push(element);
+        }
+
+        // Input elements into the queue
+        System.out.println("Enter elements for the queue (enter '0' to stop):");
+        while (true) {
+            element = scanner.nextInt();
+            if (element == 0) {
+                break;
+            }
+            queue.offer(element);
+        }
+
+        // Display elements in the stack
+        System.out.println("Elements in the stack (LIFO order):");
+        while (!stack.isEmpty()) {
+            System.out.print(stack.pop() + " ");
+        }
+        System.out.println(); // New line
+
+        // Display elements in the queue
+        System.out.println("Elements in the queue (FIFO order):");
+        while (!queue.isEmpty()) {
+            System.out.print(queue.poll() + " ");
+        }
+
+        scanner.close();
+    }
+}
